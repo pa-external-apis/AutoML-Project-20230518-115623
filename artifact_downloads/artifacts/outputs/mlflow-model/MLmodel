@@ -1,0 +1,29 @@
+artifact_path: outputs/mlflow-model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.8.16
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 0.22.1
+mlflow_version: 2.2.2
+model_uuid: 25667e87173c49b2bd9c7958a35ec2c4
+run_id: elated_chaconia_ygd1xh94fg_8
+signature:
+  inputs: '[{"name": "age", "type": "long"}, {"name": "job", "type": "string"}, {"name":
+    "marital", "type": "string"}, {"name": "education", "type": "string"}, {"name":
+    "default", "type": "string"}, {"name": "balance", "type": "long"}, {"name": "housing",
+    "type": "string"}, {"name": "loan", "type": "string"}, {"name": "contact", "type":
+    "string"}, {"name": "day", "type": "long"}, {"name": "month", "type": "string"},
+    {"name": "duration", "type": "long"}, {"name": "campaign", "type": "long"}, {"name":
+    "pdays", "type": "long"}, {"name": "previous", "type": "long"}, {"name": "poutcome",
+    "type": "string"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "str", "shape": [-1]}}]'
+utc_time_created: '2023-05-18 09:47:09.045143'
