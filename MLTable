@@ -1,0 +1,10 @@
+
+$schema: https://azuremlschemas.azureedge.net/latest/MLTable.schema.json
+
+type: mltable
+paths:
+  - file: ./train.csv
+transformations:
+  - read_delimited:
+        delimiter: ';'
+        encoding: 'ascii'
