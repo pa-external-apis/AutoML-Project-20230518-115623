@@ -1,0 +1,111 @@
+{
+    "schema_name": "pipeline_graph",
+    "schema_version": "1.0.0",
+    "data": {
+        "module_nodes": {
+            "5fc58b72": {
+                "node_id": "5fc58b72",
+                "name": "prefittedsoftvotingclassifier",
+                "status": "model"
+            },
+            "3ebb8723": {
+                "node_id": "3ebb8723",
+                "name": "Numeric",
+                "status": "dataType"
+            },
+            "3336a1cb": {
+                "node_id": "3336a1cb",
+                "name": "MeanImputer",
+                "status": "operation"
+            },
+            "5bc2b86a": {
+                "node_id": "5bc2b86a",
+                "name": "Categorical",
+                "status": "dataType"
+            },
+            "0629239e": {
+                "node_id": "0629239e",
+                "name": "StringCast-CharGramCountVectorizer",
+                "status": "operation"
+            },
+            "05375303": {
+                "node_id": "05375303",
+                "name": "ModeCatImputer-StringCast-LabelEncoder",
+                "status": "operation"
+            }
+        },
+        "edges": [
+            {
+                "source_node_id": "915e6eb0",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "4 col",
+                "dst_node_id": "3ebb8723",
+                "dst_node_name": "Numeric"
+            },
+            {
+                "source_node_id": "3ebb8723",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "3336a1cb",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "3336a1cb",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "1 col",
+                "dst_node_id": "5fc58b72",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "915e6eb0",
+                "source_node_name": "data_source",
+                "source_name": "",
+                "target_name": "12 col",
+                "dst_node_id": "5bc2b86a",
+                "dst_node_name": "Categorical"
+            },
+            {
+                "source_node_id": "5bc2b86a",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "0629239e",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "0629239e",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "4 col",
+                "dst_node_id": "5fc58b72",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "5bc2b86a",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "",
+                "dst_node_id": "05375303",
+                "dst_node_name": ""
+            },
+            {
+                "source_node_id": "05375303",
+                "source_node_name": "",
+                "source_name": "",
+                "target_name": "4 col",
+                "dst_node_id": "5fc58b72",
+                "dst_node_name": ""
+            }
+        ],
+        "child_runs": [],
+        "datasource_nodes": {
+            "915e6eb0": {
+                "node_id": "915e6eb0",
+                "name": "data_source - 16 col"
+            }
+        }
+    }
+}
